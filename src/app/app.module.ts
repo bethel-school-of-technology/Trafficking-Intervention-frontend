@@ -12,6 +12,7 @@ import { TestimoniesComponent } from './components/testimonies/testimonies.compo
 import { LogoutComponent } from './components/logout/logout.component';
 
 import {HttpClientModule} from '@angular/common/http';
+import { GetRequestComponent } from './components/fetch/fetch.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {HttpClientModule} from '@angular/common/http';
     PrayerComponent,
     RegistrationComponent,
     TestimoniesComponent,
-    LogoutComponent
+    LogoutComponent,
+    GetRequestComponent
   ],
   imports: [
     BrowserModule,
