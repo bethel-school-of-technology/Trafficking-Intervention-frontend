@@ -11,6 +11,8 @@ import { RegistrationComponent } from './registration/registration.component';
 import { TestimoniesComponent } from './testimonies/testimonies.component';
 import { LogoutComponent } from './logout/logout.component';
 
+import {HttpClientModule} from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +26,8 @@ import { LogoutComponent } from './logout/logout.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
