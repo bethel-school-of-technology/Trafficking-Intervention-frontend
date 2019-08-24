@@ -3,13 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { LocationsComponent } from './locations/locations.component';
-import { LoginComponent } from './login/login.component';
-import { PrayerComponent } from './prayer/prayer.component';
-import { RegistrationComponent } from './registration/registration.component';
-import { TestimoniesComponent } from './testimonies/testimonies.component';
-import { LogoutComponent } from './logout/logout.component';
+import { HomeComponent } from './components/home/home.component';
+import { LocationsComponent } from './components/locations/locations.component';
+import { LoginComponent } from './components/login/login.component';
+import { PrayerComponent } from './components/prayer/prayer.component';
+import { RegistrationComponent } from './components/registration/registration.component';
+import { TestimoniesComponent } from './components/testimonies/testimonies.component';
+import { LogoutComponent } from './components/logout/logout.component';
 
 import {HttpClientModule} from '@angular/common/http';
 
