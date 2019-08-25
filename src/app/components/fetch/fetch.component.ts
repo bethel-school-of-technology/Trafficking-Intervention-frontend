@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 
 // @Component({
@@ -27,11 +27,12 @@ export class GetRequestComponent {
       .then(resp => (this.apiData = resp));
   }
 }
-export class FetchComponent implements OnInit {
+// export class FetchComponent {
 
-  constructor() { }
+//   constructor() { }
 
-  ngOnInit() {
-  }
+//   ngOnInit() {
+//   }
 
-}
+// }
+// created fetch component

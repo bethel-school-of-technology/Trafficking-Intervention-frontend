@@ -1,3 +1,9 @@
-nav {
-    align-content: center;
+.nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    /* float: left; */
+    /* display: block; */
 }
