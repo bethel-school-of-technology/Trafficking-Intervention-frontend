@@ -14,6 +14,10 @@ import { LogoutComponent } from './components/logout/logout.component';
 import {HttpClientModule} from '@angular/common/http';
 import { GetRequestComponent } from './components/fetch/fetch.component';
 
+// import { PrayerService } from './services/prayer.service';
+// import { LoginService } from './services/login.service';
+// trying to add services
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +28,8 @@ import { GetRequestComponent } from './components/fetch/fetch.component';
     RegistrationComponent,
     TestimoniesComponent,
     LogoutComponent,
-    GetRequestComponent
+    GetRequestComponent 
+    // added GetRequestComponent
   ],
   imports: [
     BrowserModule,
