@@ -4,11 +4,19 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: stretch;
-    background-color: #e0c722;
+    /* background-color: #e0c722; */
     /* float: left; */
     /* display: block; */
 }
 
-.body{
+/* .nav a:hover {
     background-color: #e0c722;
-}
+    color: black;
+  }
+
+  .nav a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+   */
+   /* comment back in when bootstrap is gone */
