@@ -4,6 +4,11 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: stretch;
+    background-color: #e0c722;
     /* float: left; */
     /* display: block; */
+}
+
+.body{
+    background-color: #e0c722;
 }

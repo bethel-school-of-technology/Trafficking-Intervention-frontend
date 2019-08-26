@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PrayerService } from '../../services/prayer.service';
 
 @Component({
   selector: 'app-prayer',
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrayerComponent implements OnInit {
 
-  constructor() { }
+  constructor(private prayerService: PrayerService) { }
+  // constructor() { }
 
   ngOnInit() {
   }

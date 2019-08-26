@@ -11,8 +11,8 @@ import { Component } from '@angular/core';
   selector: 'fetch-request',
   template: `<h1> Get Prayer Requests </h1>
   <button type="button" (click)="this.getApi()">Click Me!</button>
-  <ul *ngFor = "let data of apiData">
-  <li>{{data}} </li>
+  <ul *ngFor = "let apiData">
+  <li>{{apiData}} </li>
   </ul>
   `
 })
@@ -24,6 +24,7 @@ export class GetRequestComponent {
     const url = 'http://localhost:5000/api/values';
     fetch (url)
       .then(resp => resp.json())
+      // .then (resp => console.log(resp));
       .then(resp => (this.apiData = resp));
   }
 }
