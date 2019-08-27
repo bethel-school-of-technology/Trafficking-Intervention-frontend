@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { from } from 'rxjs';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +11,9 @@ export class RegistrationService {
   constructor(private http: HttpClient) {
    }
 
+  //  getUsers(): Users[]{
+  //    return this.http.get("http://localhost:5000/api/values")
+  //  }
   //  addUser(id, firstName, lastName, prayerRequests, date, sites) {
   //   const userInfo = {
   //     id: id,
