@@ -1,7 +1,8 @@
-export class Users {
+export class Users{
         id: number;
-        username: string;
-        prayerRequests: string;
-        date: Date;
-        sites: string;
-}
+        firstName: string;
+        lastName: string;
+        email: string;
+        phone: string;
+        city: string;
+    }
