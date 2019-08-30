@@ -21,3 +21,4 @@ export class PrayerComponent implements OnInit {
       //     console.log(res.body);
         // });      
       }}
+      // <fetch-request></fetch-request>
