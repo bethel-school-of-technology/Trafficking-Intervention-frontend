@@ -14,6 +14,7 @@ import { LogoutComponent } from './components/logout/logout.component';
 import {HttpClientModule} from '@angular/common/http';
 import { GetRequestComponent } from './components/prayer/fetchPrayer/fetch.component';
 import { FetchTestimoniesComponent } from './components/testimonies/fetch-testimonies/fetch-testimonies.component';
+import { FetchLocationsComponent } from './components/locations/fetch-locations/fetch-locations.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { FetchTestimoniesComponent } from './components/testimonies/fetch-testim
     TestimoniesComponent,
     LogoutComponent,
     GetRequestComponent,
-    FetchTestimoniesComponent 
+    FetchTestimoniesComponent,
+    FetchLocationsComponent 
     // added GetRequestComponent
   ],
   imports: [
