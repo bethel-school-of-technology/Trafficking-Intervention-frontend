@@ -1,7 +1,6 @@
 export class Locations{
     id: number;
-    firstName: string;
-    lastName: string;
+    locationName: string;
     address: string;
     date: Date;
     confirmed: boolean;
