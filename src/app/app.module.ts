@@ -12,11 +12,9 @@ import { TestimoniesComponent } from './components/testimonies/testimonies.compo
 import { LogoutComponent } from './components/logout/logout.component';
 
 import {HttpClientModule} from '@angular/common/http';
-import { GetRequestComponent } from './components/fetch/fetch.component';
+import { GetRequestComponent } from './components/prayer/fetchPrayer/fetch.component';
+import { FetchTestimoniesComponent } from './components/testimonies/fetch-testimonies/fetch-testimonies.component';
 
-// import { PrayerService } from './services/prayer.service';
-// import { LoginService } from './services/login.service';
-// trying to add services
 
 @NgModule({
   declarations: [
@@ -28,7 +26,8 @@ import { GetRequestComponent } from './components/fetch/fetch.component';
     RegistrationComponent,
     TestimoniesComponent,
     LogoutComponent,
-    GetRequestComponent 
+    GetRequestComponent,
+    FetchTestimoniesComponent 
     // added GetRequestComponent
   ],
   imports: [

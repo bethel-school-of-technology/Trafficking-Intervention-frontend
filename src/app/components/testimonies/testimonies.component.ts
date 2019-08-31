@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TestimoniesService } from '../../services/testimonies.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-testimonies',

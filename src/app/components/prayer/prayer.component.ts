@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PrayerService } from '../../services/prayer.service';
 import { HttpClientModule } from '@angular/common/http';
 
+
 @Component({
   selector: 'app-prayer',
   templateUrl: './prayer.component.html',
