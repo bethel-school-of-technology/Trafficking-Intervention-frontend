@@ -11,7 +11,7 @@ import { Prayer } from '../../models/prayer';
   styleUrls: ['./prayer.component.css']
 })
 export class PrayerComponent implements OnInit {
-
+formData: Prayer;
   constructor(private prayerService: PrayerService) { }
     // this.prayerService.getPrayerRequest().subscribe((res)=>{
     //   this.prayerService.getPrayerRequest(this.prayerService).subscribe((res)=>{

@@ -4,5 +4,10 @@ import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class ConfigService {
-  constructor(private http: HttpClient) { }
+  // private _config: { [key:string]: string};
+  // constructor() {
+  //   this._config = {
+
+  //   }
+  //  }
 }

@@ -11,6 +11,10 @@ import { RegistrationComponent } from './components/registration/registration.co
 import { TestimoniesComponent } from './components/testimonies/testimonies.component';
 import { LogoutComponent } from './components/logout/logout.component';
 
+import { PrayerService } from './services/prayer.service';
+import { LocationsService } from './services/locations.service';
+import { TestimoniesService } from './services/testimonies.service';
+
 import {HttpClientModule} from '@angular/common/http';
 import { GetRequestComponent } from './components/prayer/fetchPrayer/fetch.component';
 import { FetchTestimoniesComponent } from './components/testimonies/fetch-testimonies/fetch-testimonies.component';
@@ -37,7 +41,7 @@ import { FetchLocationsComponent } from './components/locations/fetch-locations/
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [PrayerService, LocationsService, TestimoniesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
