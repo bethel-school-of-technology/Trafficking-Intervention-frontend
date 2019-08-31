@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpRequest, HttpEvent, HttpEventType } from '@angular/common/http';
 import { Prayer } from '../models/prayer';
 
-
 @Injectable({ 
   providedIn: 'root'
 })
@@ -15,8 +14,8 @@ export class PrayerService {
   public getPrayerRequest(){
     return this.http.get<Prayer[]>(`${this.apiURL}`);
 }
-  public createPrayerRequest(prayerRequest: Prayer){
-    return this.http.post(`${this.postUrl}`, prayerRequest);
+ createPrayerRequest(prayerRequest: Prayer){
+    return this.http.post(`${this.apiURL}`, prayerRequest);
 }
 public updatePrayerRequest(prayerRequest: Prayer){
   return this.http.put(`${this.apiURL}`, prayerRequest);
