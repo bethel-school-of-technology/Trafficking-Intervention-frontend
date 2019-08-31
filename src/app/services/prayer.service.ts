@@ -9,12 +9,6 @@ import { Prayer } from '../models/prayer';
 export class PrayerService {
   apiURL: string ='http://localhost:5000/api/values';
   postUrl: string ='http://localhost:4200/prayer';
-  // .then(console.log(apiUrl))
-  // console.log(apiURL)
-  // interface Post {
-  //   title: string;
-  //   body: string;
-  // }
 
   constructor(private http: HttpClient) { }
 
