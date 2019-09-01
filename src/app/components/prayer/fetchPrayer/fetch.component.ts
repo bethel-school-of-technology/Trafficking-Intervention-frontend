@@ -7,7 +7,11 @@ import { Component } from '@angular/core';
    <button type="button" (click)="this.getApi()">See All Prayer Requests!</button>
    <ul *ngFor = "let data of apiData">
    <li>{{data.firstName}} {{data.lastName}}</li>
+<<<<<<< HEAD
    <li>{{data.prayerRequest}}</li>
+=======
+   <li>{{data.prayerRequests}}</li>
+>>>>>>> 513857ec29816fc309a22bc809c3f6141de1ee95
    <li>{{data.date}}</li>
    <li>{{data.sites}}</li>
    </ul>

@@ -6,3 +6,4 @@ export class Users{
         phone: string;
         city: string;
     }
+    

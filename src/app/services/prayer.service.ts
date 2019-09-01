@@ -2,9 +2,19 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpRequest, HttpEvent, HttpEventType } from '@angular/common/http';
 import { Prayer } from '../models/prayer';
 
+export interface PrayerRequest {
+  id: number;
+  firstName: string;
+  lastName: string;
+  prayer: string;
+  date: Date;
+  site: string;
+}
+
 @Injectable({ 
   providedIn: 'root'
 })
+
 export class PrayerService {
   apiURL: string ='http://localhost:5000/api/PrayerRequest';
   postURL: string ='http://localhost:5000/api/PrayerRequest';
@@ -25,8 +35,13 @@ export class PrayerService {
   public getPrayerRequest(){
     return this.http.get<Prayer[]>(`${this.apiURL}`);
 }
+<<<<<<< HEAD
 public createPrayerRequest(prayerRequest: Prayer){
     return this.http.post(`${this.postURL}`, prayerRequest);
+=======
+ createPrayerRequest(prayerRequest: Prayer){
+    return this.http.post(`${this.postURL}/prayer/`, prayerRequest);
+>>>>>>> 513857ec29816fc309a22bc809c3f6141de1ee95
 }
 public updatePrayerRequest(prayerRequest: Prayer){
   return this.http.put(`${this.apiURL}`, prayerRequest);
