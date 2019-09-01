@@ -35,14 +35,11 @@ export class PrayerService {
   public getPrayerRequest(){
     return this.http.get<Prayer[]>(`${this.apiURL}`);
 }
-<<<<<<< HEAD
+
 public createPrayerRequest(prayerRequest: Prayer){
     return this.http.post(`${this.postURL}`, prayerRequest);
-=======
- createPrayerRequest(prayerRequest: Prayer){
-    return this.http.post(`${this.postURL}/prayer/`, prayerRequest);
->>>>>>> 513857ec29816fc309a22bc809c3f6141de1ee95
 }
+
 public updatePrayerRequest(prayerRequest: Prayer){
   return this.http.put(`${this.apiURL}`, prayerRequest);
 }

@@ -13,6 +13,7 @@ import { Prayer } from '../../models/prayer';
 export class PrayerComponent implements OnInit {
 formData: Prayer;
   constructor(private prayerService: PrayerService) { }
+  // this.prayer
     // this.prayerService.getPrayerRequest().subscribe((res)=>{
     //   this.prayerService.getPrayerRequest(this.prayerService).subscribe((res)=>{
     //     console.log(res.body);
