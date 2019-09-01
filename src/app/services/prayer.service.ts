@@ -16,8 +16,8 @@ export interface PrayerRequest {
 })
 
 export class PrayerService {
-  apiURL: string ='http://localhost:5000/api/values';
-  postURL: string ='http://localhost:4200';
+  apiURL: string ='http://localhost:5000/api/PrayerRequest';
+  postURL: string ='http://localhost:5000/api/PrayerRequest';
 
   constructor(private http: HttpClient) { }
   // router.post('/prayer', function (req, res, next) {
@@ -35,8 +35,8 @@ export class PrayerService {
   public getPrayerRequest(){
     return this.http.get<Prayer[]>(`${this.apiURL}`);
 }
- createPrayerRequest(prayerRequest: Prayer){
-    return this.http.post(`${this.postURL}/prayer/`, prayerRequest);
+ createPrayerRequest(prayerRequest: PrayerRequest){
+    return this.http.post<PrayerRequest>(`${this.postURL}`, prayerRequest);
 }
 public updatePrayerRequest(prayerRequest: Prayer){
   return this.http.put(`${this.apiURL}`, prayerRequest);
