@@ -6,11 +6,11 @@ import { Prayer } from '../models/prayer';
   providedIn: 'root'
 })
 export class PrayerService {
-  apiURL: string ='http://localhost:5000/api/values';
-  postURL: string ='http://localhost:4200';
+  apiURL: string ='http://localhost:5000/api/PrayerRequest';
+  postURL: string ='http://localhost:5000/api/PrayerRequest';
 
   constructor(private http: HttpClient) { }
-  // router.post('/prayer', function (req, res, next) {
+  // router.post(apiURL, function (req, res, next) {
   //   models.prayer.create(req.body)
   //     .then(newPrayerRequest => {
   //       res.setHeader('Content-Type', 'application/json');
@@ -25,8 +25,8 @@ export class PrayerService {
   public getPrayerRequest(){
     return this.http.get<Prayer[]>(`${this.apiURL}`);
 }
- createPrayerRequest(prayerRequest: Prayer){
-    return this.http.post(`${this.postURL}/prayer`, prayerRequest);
+public createPrayerRequest(prayerRequest: Prayer){
+    return this.http.post(`${this.postURL}`, prayerRequest);
 }
 public updatePrayerRequest(prayerRequest: Prayer){
   return this.http.put(`${this.apiURL}`, prayerRequest);

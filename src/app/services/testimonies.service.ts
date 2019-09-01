@@ -7,8 +7,8 @@ import { Testimonies } from '../models/testimonies';
 })
 export class TestimoniesService {
 
-  apiURL: string ='http://localhost:5000/api/values';
-  postUrl: string ='http://localhost:4200/testimonies';
+  apiURL: string ='http://localhost:5000/api/testimony';
+  postUrl: string ='http://localhost:5000/testimony';
 
   constructor(private http: HttpClient) { }
 
