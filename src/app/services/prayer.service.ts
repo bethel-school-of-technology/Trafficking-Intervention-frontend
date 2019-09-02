@@ -13,6 +13,10 @@ export interface PrayerRequest {
   site: string;
 }
 
+// getPrayer(){
+//   return this.http.get<Prayer>(this.postURL)
+// };
+
 @Injectable({ 
   providedIn: 'root'
 })
@@ -20,6 +24,15 @@ export interface PrayerRequest {
 export class PrayerService {
 apiURL: string ='http://localhost:5000/api/PrayerRequest';
 postURL: string ='http://localhost:5000/api/PrayerRequest';
+
+getPrayer(){
+  return this.http.get<Prayer>(this.postURL)
+};
+
+// prayer: Prayer;
+// showPrayer(){
+//   this.
+// }
   // httpClient: any;
 
 // // @Injectable({
@@ -72,7 +85,7 @@ postURL: string ='http://localhost:5000/api/PrayerRequest';
 
 // post(prayerRequest: PrayerRequest): Observable<PrayerRequest>{
 //   if (prayerRequest.id === null){
-//     return this.httpClient.post<PrayerRequest>(this.postURL, prayerRequest, {
+//     return this.http.post<PrayerRequest>(this.postURL, prayerRequest, {
 //       headers: new HttpHeaders ({
 //         'Content-Type': 'application/json'
 //       })

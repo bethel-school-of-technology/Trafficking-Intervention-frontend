@@ -23,6 +23,6 @@ export class GetRequestComponent {
    }
 }
 
-export class PostRequestComponent {
+// export class PostRequestComponent {
 
-}
+// }

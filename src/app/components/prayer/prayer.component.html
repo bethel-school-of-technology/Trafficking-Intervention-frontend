@@ -8,8 +8,19 @@
     Intervention Site: <input type="text" name="site" placeholder="Intervention Site"><br><br>
     Date: <input type="datetime" name="date" placeholder="Date"><br><br>
     Prayer Request: <input type="text" name="prayer" placeholder="Prayer Request"><br><br>
-    <button type="submit">Submit</button><br><br>
+    <button type="submit" (click)="this.postPrayerRequest()">Submit</button><br><br>
     </form>
+
+    <ul *ngFor = "let data of apiPrayerRequest">
+      <li>{{data.firstName}} {{data.lastName}}</li>
+      <li>{{data.prayerRequest}}</li>
+      <li>{{data.date}}</li>
+      <li>{{data.sites}}</li>
+      </ul>
+
+    <!-- <div>
+      <label>{{apiPrayerRequest.apiUserId}}</label>
+    </div> -->
 
     <!-- fetch(postURL)
   .then(res => res.blob()) // Gets the response and returns it as a blob

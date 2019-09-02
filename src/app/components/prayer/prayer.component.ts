@@ -12,12 +12,38 @@ import { Observable } from 'rxjs';
 })
 export class PrayerComponent {
 
-// formData: Prayer;
 postURL: 'http://localhost:5000/api/PrayerRequest';
+
+apiPrayerRequest; 
+
+getPrayerRequest() {
+
+  fetch(this.postURL)
+      .then(resp => resp.json())
+      .then(resp => {
+        this.apiPrayerRequest.append(this.apiPrayerRequest, resp);
+        this.httpClient.post(this.postURL, PrayerComponent).subscribe(Response => {console.log(Response)});
+        // (this.apiPrayerRequest = resp)
+      });
+}
+
+
+
 
 
   constructor(private httpClient: HttpClient) { }
+
+  // getPrayer(){
+  //   return this.httpClient.get<Prayer>(this.postURL)
+  // };
+
+//   prayer: Prayer;
+// showPrayer(){
+//   this.prayerService.getPrayerRequest()
+//   .subscribe((data: Prayer) => this.prayer = {...data});
+// }
   
+  ngOnInit()    {  }
   // fetch(postURL)
   // .then(res => res.blob()) // Gets the response and returns it as a blob
   // .then(blob => {
