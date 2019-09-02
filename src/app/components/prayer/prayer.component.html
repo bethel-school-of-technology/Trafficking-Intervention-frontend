@@ -3,12 +3,44 @@
   Please let us know how we can pray!
 </p>
 
-<form style="text-align: center">
-    Name: <input type="text" name="name" placeholder="Name"><br><br>
+<form style="text-align: center" id="postData">
+    Name: <input type= "text" id="name" placeholder="Name"><br><br>
     Intervention Site: <input type="text" name="site" placeholder="Intervention Site"><br><br>
     Date: <input type="datetime" name="date" placeholder="Date"><br><br>
     Prayer Request: <input type="text" name="prayer" placeholder="Prayer Request"><br><br>
-    <button type="createPrayerRequest()">Submit</button><br><br>
+    <button type="submit">Submit</button><br><br>
     </form>
+
+    <!-- fetch(postURL)
+  .then(res => res.blob()) // Gets the response and returns it as a blob
+  .then(blob => {
+    var formData = new FormData();
+    formData.append("file", blob);
+
+    this.http.post(endpoint, formData).subscribe(response => {
+        console.log(response);
+    });
+
+  }); -->
+  <!-- from:https://stackoverflow.com/questions/57628638/angular-send-remote-file-with-angular-http-form-data -->
+    <!-- let postData = new postData();
+    fetch ("http://localhost:5000/api/PrayerRequest",
+    {
+    body: postData,
+    method: "post"
+    )}; -->
+<!-- from: https://stackoverflow.com/questions/46640024/how-do-i-post-form-data-with-fetch-api -->
+
+  <!-- document.getElementById('postData').addEventListener('submit', postData);
+  function postData(event){
+    let name = document.getElementById('name').value;
+
+    fetch('http://localhost:5000/api/PrayerRequest',{
+      method: 'POST',
+      body: json.stringify({name:name})
+    }).then((res) => res.json())
+    .then((data) => console.log(data))
+  } -->
+  <!-- from: https://dev.to/dev_amaz/using-fetch-api-to-get-and-post--1g7d -->
 
 <prayer-request></prayer-request>
