@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Prayer } from '../../models/prayer';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Observable } from 'rxjs';
+import { PrayerRequest } from '../../services/prayer.service';
 
 @Component({
   selector: 'app-prayer',
@@ -14,17 +15,37 @@ export class PrayerComponent {
 
 postURL: 'http://localhost:5000/api/PrayerRequest';
 
-apiPrayerRequest; 
+// apiPrayerRequest; 
+
+// fetchPrayerRequest(): Observable<PrayerRequest> {
+//   const newPrayerRequest = {
+
+//   }
+// }
+// PrayerComponent.fetch(this.postURL, {
+//   method: 'POST',
+//   body: new FormData(document.getElementById('postData')
+// })
 
 getPrayerRequest() {
+  postURL: 'http://localhost:5000/api/PrayerRequest';
 
-  fetch(this.postURL)
-      .then(resp => resp.json())
-      .then(resp => {
-        this.apiPrayerRequest.append(this.apiPrayerRequest, resp);
-        this.httpClient.post(this.postURL, PrayerComponent).subscribe(Response => {console.log(Response)});
-        // (this.apiPrayerRequest = resp)
-      });
+  fetch(this.postURL,{
+    method: 'POST',
+    body: JSON.stringify(document.getElementById('postData')),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
+  .then(res => res.json())
+.then(response => console.log('Success:', JSON.stringify(response)))
+.catch(error => console.error('Error:', error));
+      // .then(resp => resp.json())
+      // .then(resp => {
+      //   this.apiPrayerRequest.append(this.apiPrayerRequest, resp);
+      //   this.httpClient.post(this.postURL, PrayerComponent).subscribe(Response => {console.log(Response)});
+      //   // (this.apiPrayerRequest = resp)
+      // });
 }
 
 

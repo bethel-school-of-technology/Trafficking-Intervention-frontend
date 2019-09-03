@@ -21,13 +21,15 @@ export interface PrayerRequest {
   providedIn: 'root'
 })
 
+
 export class PrayerService {
 apiURL: string ='http://localhost:5000/api/PrayerRequest';
 postURL: string ='http://localhost:5000/api/PrayerRequest';
 
-getPrayer(){
-  return this.http.get<Prayer>(this.postURL)
-};
+// constructor(private http: HttpClient){}
+// getPrayer(){
+//   return this.http.get<Prayer>(this.postURL)
+// };
 
 // prayer: Prayer;
 // showPrayer(){
