@@ -11,12 +11,19 @@
     <button type="submit" (click)="Submit">Submit</button><br><br>
     </form>
 
-    <ul *ngFor = "let data of apiPrayerRequest">
+
+<prayer-request></prayer-request>
+
+
+
+
+
+    <!-- <ul *ngFor = "let data of apiPrayerRequest">
       <li>{{data.firstName}} {{data.lastName}}</li>
       <li>{{data.prayerRequest}}</li>
       <li>{{data.date}}</li>
       <li>{{data.sites}}</li>
-      </ul>
+      </ul> -->
 
     <!-- <div>
       <label>{{apiPrayerRequest.apiUserId}}</label>
@@ -53,5 +60,3 @@
     .then((data) => console.log(data))
   } -->
   <!-- from: https://dev.to/dev_amaz/using-fetch-api-to-get-and-post--1g7d -->
-
-<prayer-request></prayer-request>

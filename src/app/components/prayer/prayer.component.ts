@@ -27,12 +27,22 @@ postURL: 'http://localhost:5000/api/PrayerRequest';
 //   body: new FormData(document.getElementById('postData')
 // })
 
-getPrayerRequest() {
-  postURL: 'http://localhost:5000/api/PrayerRequest';
+getPrayer() {
+  // postURL: 'http://localhost:5000/api/PrayerRequest';
+
+//   var form = new FormData(document.getElementById('postData'));
+
+// fetch(this.postURL, {
+//   method: 'POST',
+//   body: form,
+// });
 
   fetch(this.postURL,{
     method: 'POST',
     body: JSON.stringify(document.getElementById('postData')),
+    mode: 'cors', // no-cors, cors, *same-origin
+    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: 'omit',
     headers: {
       'Content-Type': 'application/json'
     }
@@ -40,13 +50,42 @@ getPrayerRequest() {
   .then(res => res.json())
 .then(response => console.log('Success:', JSON.stringify(response)))
 .catch(error => console.error('Error:', error));
+
+}
+
+
       // .then(resp => resp.json())
       // .then(resp => {
       //   this.apiPrayerRequest.append(this.apiPrayerRequest, resp);
       //   this.httpClient.post(this.postURL, PrayerComponent).subscribe(Response => {console.log(Response)});
       //   // (this.apiPrayerRequest = resp)
       // });
-}
+      // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+
+  //     postData(this.postURL, (document.getElementById('postData')))
+  // .then(data => console.log(JSON.stringify(data))) // JSON-string from `response.json()` call
+  // .catch(error => console.error(error));
+// }
+//   function postData(url = '', data = PrayerService) {
+
+//     // postURL: 'http://localhost:5000/api/PrayerRequest';
+//     // Default options are marked with *
+//       return fetch(this.postURL, {
+//           method: 'POST', // *GET, POST, PUT, DELETE, etc.
+//           mode: 'cors', // no-cors, cors, *same-origin
+//           cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+//           credentials: 'same-origin', // include, *same-origin, omit
+//           headers: {
+//               'Content-Type': 'application/json',
+//               // 'Content-Type': 'application/x-www-form-urlencoded',
+//           },
+//           redirect: 'follow', // manual, *follow, error
+//           referrer: 'no-referrer', // no-referrer, *client
+//           body: JSON.stringify(data), // body data type must match "Content-Type" header
+//       })
+//       .then(response => response.json()); // parses JSON response into native JavaScript objects 
+//   }
+// }
 
 
 

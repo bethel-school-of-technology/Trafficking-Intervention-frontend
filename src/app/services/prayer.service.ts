@@ -23,10 +23,30 @@ export interface PrayerRequest {
 
 
 export class PrayerService {
-apiURL: string ='http://localhost:5000/api/PrayerRequest';
-postURL: string ='http://localhost:5000/api/PrayerRequest';
 
-// constructor(private http: HttpClient){}
+postURL: 'http://localhost:5000/api/PrayerRequest';
+
+getPrayer() {
+//   fetch(this.postURL,{
+//     method: 'POST',
+//     body: JSON.stringify(document.getElementById('postData')),
+//     mode: 'cors', // no-cors, cors, *same-origin
+//     cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+//     credentials: 'omit',
+//     headers: {
+//       'Content-Type': 'application/json'
+//     }
+//   })
+//   .then(res => res.json())
+// .then(response => console.log('Success:', JSON.stringify(response)))
+// .catch(error => console.error('Error:', error));
+
+}
+
+// apiURL: string ='http://localhost:5000/api/PrayerRequest';
+// postURL: string ='http://localhost:5000/api/PrayerRequest';
+
+constructor(private http: HttpClient){}
 // getPrayer(){
 //   return this.http.get<Prayer>(this.postURL)
 // };
@@ -52,12 +72,12 @@ postURL: string ='http://localhost:5000/api/PrayerRequest';
 //   }
 // }
 
-  constructor(private http: HttpClient) { }
-  postPrayerequest(prayerRequest : PrayerRequest) : Observable<any> {
-        var headers = new HttpHeaders().set('Content-Type', 'application/json; charset=utf-8');
-        var test = {name: "hello"} //dummy data
-        return this.http.post(this.postURL, test, {headers: headers});
-      }
+  // constructor(private http: HttpClient) { }
+  // postPrayerequest(prayerRequest : PrayerRequest) : Observable<any> {
+  //       var headers = new HttpHeaders().set('Content-Type', 'application/json; charset=utf-8');
+  //       var test = {name: "hello"} //dummy data
+  //       return this.http.post(this.postURL, test, {headers: headers});
+  //     }
 
   // callServer(data: {content: string}): Observable<any> {
   //   return this.httpClient.post(this.postURL, data);
