@@ -3,60 +3,53 @@
   Please let us know how we can pray!
 </p>
 
-<form style="text-align: center" id="postData">
-    Name: <input type= "text" id="name" placeholder="Name"><br><br>
-    Intervention Site: <input type="text" name="site" placeholder="Intervention Site"><br><br>
-    Date: <input type="datetime" name="date" placeholder="Date"><br><br>
-    Prayer Request: <input type="text" name="prayer" placeholder="Prayer Request"><br><br>
-    <button type="submit" (click)="Submit">Submit</button><br><br>
+<p>
+  <a routerLink="/prayer">Get All Prayer Requests</a>
+</p>
+<div class="prayer-item" *ngFor="let item of items"> 
+  <span>{{ item.name }} </span>
+  <span>{{ item.site }}</span>
+  <span>{{ item.date }} </span>
+  <span>{{ item.prayer }}</span>
+</div> 
+
+<form [formGroup]="prayerForm" style="text-align: center" (ngSubmit)="onSubmit(prayerForm.value)">
+  <div>
+    <label for="name">
+      Name
+    </label>
+    <input id="name" type="text" formControlName="name">
+  </div>
+  <div>
+    <label for="site">
+      Site Location
+    </label>
+    <input id="site" type="text" formControlName="site">
+  </div>
+  <div>
+    <label for="date">
+      Date
+    </label>
+    <input id="date" type="datetime" formControlName="date">
+  </div>
+  <div>
+    <label for="prayer">
+      Prayer Request
+    </label>
+    <input id="prayer" type="text" formControlName="prayer">
+  </div>
+
+    <button class="button" type="submit">Submit</button><br><br>
     </form>
 
 
 <prayer-request></prayer-request>
 
+  <!-- Name: <input type= "text" id="name" placeholder="Name"><br><br> -->
+    <!-- Intervention Site: <input type="text" name="site" placeholder="Intervention Site"><br><br> -->
+    <!-- Date: <input type="datetime" name="date" placeholder="Date"><br><br> -->
+    <!-- Prayer Request: <input type="text" name="prayer" placeholder="Prayer Request"><br><br> -->
 
 
 
-
-    <!-- <ul *ngFor = "let data of apiPrayerRequest">
-      <li>{{data.firstName}} {{data.lastName}}</li>
-      <li>{{data.prayerRequest}}</li>
-      <li>{{data.date}}</li>
-      <li>{{data.sites}}</li>
-      </ul> -->
-
-    <!-- <div>
-      <label>{{apiPrayerRequest.apiUserId}}</label>
-    </div> -->
-
-    <!-- fetch(postURL)
-  .then(res => res.blob()) // Gets the response and returns it as a blob
-  .then(blob => {
-    var formData = new FormData();
-    formData.append("file", blob);
-
-    this.http.post(endpoint, formData).subscribe(response => {
-        console.log(response);
-    });
-
-  }); -->
-  <!-- from:https://stackoverflow.com/questions/57628638/angular-send-remote-file-with-angular-http-form-data -->
-    <!-- let postData = new postData();
-    fetch ("http://localhost:5000/api/PrayerRequest",
-    {
-    body: postData,
-    method: "post"
-    )}; -->
-<!-- from: https://stackoverflow.com/questions/46640024/how-do-i-post-form-data-with-fetch-api -->
-
-  <!-- document.getElementById('postData').addEventListener('submit', postData);
-  function postData(event){
-    let name = document.getElementById('name').value;
-
-    fetch('http://localhost:5000/api/PrayerRequest',{
-      method: 'POST',
-      body: json.stringify({name:name})
-    }).then((res) => res.json())
-    .then((data) => console.log(data))
-  } -->
-  <!-- from: https://dev.to/dev_amaz/using-fetch-api-to-get-and-post--1g7d -->
+   
