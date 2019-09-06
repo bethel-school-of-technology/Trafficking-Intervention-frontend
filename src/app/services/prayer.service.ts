@@ -14,7 +14,7 @@ export class PrayerService {
   
   constructor(private http: HttpClient){}
 
-  addToPrayer(prayer) {
+  addToPrayer(items) {
     this.items.push(this.items);
   }
 

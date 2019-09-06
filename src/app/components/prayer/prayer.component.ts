@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { PrayerService } from '../../services/prayer.service';
 import { HttpClient } from '@angular/common/http';
-import { Prayer } from '../../models/prayer';
-import { FormBuilder } from '@angular/forms';
-import { Observable } from 'rxjs';
+// import { Prayer } from '../../models/prayer';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { post } from 'selenium-webdriver/http';
+// import { Observable } from 'rxjs';
 
 
 @Component({
@@ -11,15 +12,18 @@ import { Observable } from 'rxjs';
   templateUrl: './prayer.component.html',
   styleUrls: ['./prayer.component.css']
 })
-export class PrayerComponent implements OnInit{
+
+
+export class PrayerComponent {
   items;
   prayerForm;
+  postURL: 'http://localhost:5000/api/PrayerRequest';
 
-postURL: 'http://localhost:5000/api/PrayerRequest';
 
   constructor(
     private prayerService: PrayerService,
-    private formBuilder: FormBuilder,) {
+    private formBuilder: FormBuilder,
+    ) {
       this.items = this.prayerService.getItems();
       this.prayerForm = this.formBuilder.group({
         name: '',
@@ -31,13 +35,32 @@ postURL: 'http://localhost:5000/api/PrayerRequest';
 
      onSubmit(prayerData) {
       // Process checkout data here
+      // this.items.post(this.postURL);
       console.warn('Your prayer request has been submitted', prayerData);
   
       this.items = this.prayerService.clearItems();
       this.prayerForm.reset();
     }
+    getPrayer() {
 
 
+  fetch(this.postURL,{
+    method: 'POST',
+    body: JSON.stringify(this.items),
+    mode: 'cors', // no-cors, cors, *same-origin
+    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: 'omit',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
+
+  .then(res => res.json())
+
+.then(response => console.log('Success:', JSON.stringify(response)))
+.catch(error => console.error('Error:', error));
+
+    }
   
   ngOnInit()    {  }
 
