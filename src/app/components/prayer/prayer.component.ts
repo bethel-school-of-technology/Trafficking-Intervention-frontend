@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { PrayerService } from '../../services/prayer.service';
-import { HttpClient } from '@angular/common/http';
-// import { Prayer } from '../../models/prayer';
+import { HttpClientModule } from '@angular/common/http';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { post } from 'selenium-webdriver/http';
-// import { Observable } from 'rxjs';
+
 
 
 @Component({
@@ -34,31 +33,31 @@ export class PrayerComponent {
      }
 
      onSubmit(prayerData) {
-      // Process checkout data here
-      // this.items.post(this.postURL);
+
+    
       console.warn('Your prayer request has been submitted', prayerData);
   
       this.items = this.prayerService.clearItems();
       this.prayerForm.reset();
-    }
+    }Z
     getPrayer() {
 
 
-  fetch(this.postURL,{
-    method: 'POST',
-    body: JSON.stringify(this.items),
-    mode: 'cors', // no-cors, cors, *same-origin
-    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-    credentials: 'omit',
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  })
+//   fetch(this.postURL,{
+//     method: 'POST',
+//     body: JSON.stringify(this.items),
+//     mode: 'cors', // no-cors, cors, *same-origin
+//     cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+//     credentials: 'omit',
+//     headers: {
+//       'Content-Type': 'application/json'
+//     }
+//   })
 
-  .then(res => res.json())
+//   .then(res => res.json())
 
-.then(response => console.log('Success:', JSON.stringify(response)))
-.catch(error => console.error('Error:', error));
+// .then(response => console.log('Success:', JSON.stringify(response)))
+// .catch(error => console.error('Error:', error));
 
     }
   

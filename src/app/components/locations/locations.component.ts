@@ -12,7 +12,7 @@ import { post } from 'selenium-webdriver/http';
 export class LocationsComponent {
 
   items;
-  postURL: 'http://localhost:5000/api/PrayerRequest';
+  postURL: 'http://localhost:5000/api/Locations';
   locationsForm: FormGroup;
 
   constructor(
@@ -23,8 +23,9 @@ export class LocationsComponent {
       this.locationsForm = this.formBuilder.group({
         name: '',
         site: '',
-        date:'',
-        prayer: ''
+        address:'',
+        type: '',
+        date: ''
       });
      }
 

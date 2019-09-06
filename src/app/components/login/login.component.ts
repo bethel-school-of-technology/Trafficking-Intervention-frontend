@@ -14,7 +14,7 @@ import { post } from 'selenium-webdriver/http';
 export class LoginComponent {
   items;
   loginForm: FormGroup;
-  postURL: 'http://localhost:5000/api/PrayerRequest';
+  postURL: 'http://localhost:5000/api/Login';
 
 
   constructor(

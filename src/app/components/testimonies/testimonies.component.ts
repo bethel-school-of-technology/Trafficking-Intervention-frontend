@@ -13,7 +13,7 @@ export class TestimoniesComponent implements OnInit {
 
   items;
   testimonyForm;
-  postURL: 'http://localhost:5000/api/PrayerRequest';
+  postURL: 'http://localhost:5000/api/Testimony';
 
   constructor(
     private testimonyService: TestimoniesService,
