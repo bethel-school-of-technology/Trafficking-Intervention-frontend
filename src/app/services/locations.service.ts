@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Locations } from '../models/locations';
 import { HttpClient } from '@angular/common/http';
-  import { from } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +9,23 @@ export class LocationsService {
   apiURL: string ='http://localhost:5000/api/values';
   postUrl: string ='http://localhost:4200/locations';
 
-  constructor(private http: HttpClient) { }
+  items = [];
+  
+  
+  constructor(private http: HttpClient){}
+
+  addToLocations(items) {
+    this.items.push(this.items);
+  }
+
+  getItems() {
+    return this.items;
+  }
+
+  clearItems() {
+    this.items = [];
+    return this.items;
+  }
 
 //   public getLocations(){
 //     return this.http.get<Locations[]>(`${this.apiURL}`);

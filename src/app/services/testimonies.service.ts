@@ -1,28 +1,27 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Testimonies } from '../models/testimonies';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class TestimoniesService {
 
-  apiURL: string ='http://localhost:5000/api/testimony';
-  postUrl: string ='http://localhost:5000/testimony';
+  items = [];
+  
+  
+  constructor(private http: HttpClient){}
 
-  constructor(private http: HttpClient) { }
+  addToTestimony(items) {
+    this.items.push(this.items);
+  }
 
-//   public getTestimonies(){
-//     return this.http.get<Testimonies[]>(`${this.apiURL}`);
-// }
-//   public createTestimonies(testimonies): Testimonies){
-//     return this.http.post(`${this.postUrl}`, testimonies);
-// }
-// public updateTestimonies(testimonies: Testimonies){
-//   return this.http.put(`${this.apiURL}`, testimonies);
-// }
+  getItems() {
+    return this.items;
+  }
 
-// public deleteTestimonies(testimonies: Testimonies){
-//   return this.http.put(`${this.apiURL}`, testimonies);
-// }
+  clearItems() {
+    this.items = [];
+    return this.items;
+  }
 }

@@ -1,19 +1,22 @@
-<!-- <br><h1 style="text-align: center">Trafficking Interventions</h1>
+<br><h1 style="text-align: center">Trafficking Interventions</h1>
 <br><p style="text-align: center">
   Please Login or Register!
 </p>
-<form style="text-align: center">
-  Username: <input type="text" name="username" placeholder="User Name"><br><br>
-  Password: <input type="text" name="password" placeholder="Password"><br><br>
-  <button type="submit">Login</button><br><br>
-  <button type="submit">Register</button>
-created register button -->
-<!-- </form> --> -->
-<!-- created login form -->
 
-<!-- <div>
-  {{json}}
-</div> -->
-<!-- trying to figure out http post -->
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+  <div>
+    <label for="username">
+      Username
+    </label>
+    <input id="username" type="text" formControlName="username">
+  </div>
+  <div>
+    <label for="password">
+      Password
+    </label>
+    <input id="password" type="text" formControlName="password">
+  </div>
 
-<!-- <fetch-request></fetch-request> -->
+<button class="button" type="submit">Submit</button>
+
+    </form>

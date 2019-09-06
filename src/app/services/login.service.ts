@@ -1,19 +1,26 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Login } from '../models/login';
-import { from } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
 
-  uri = 'http://localhost:5000/api/values';
-  postUrl: string ='http://localhost:4200/login';
+  items = [];
+  
+  
+  constructor(private http: HttpClient){}
 
-  constructor(private http: HttpClient) { }
+  addToUsers(items) {
+    this.items.push(this.items);
+  }
 
-  //   public createUser(user: User){
-//     return this.http.post(`${this.postUrl}`, User);
-// }
+  getItems() {
+    return this.items;
+  }
+
+  clearItems() {
+    this.items = [];
+    return this.items;
+  }
 }

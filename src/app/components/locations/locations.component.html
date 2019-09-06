@@ -1,14 +1,45 @@
-<!-- <br><h1 style="text-align: center">Locations</h1>
+<br><h1 style="text-align: center">Locations</h1>
+  <div>
 <br><p style="text-align: center">
   In an effort to have an updated map of trafficking locations in Houston, you can report a suspected location below:
-</p>
+</p> 
+</div>
 
-<form>
-    Name: <input type="text" name="name" placeholder="Name"><br><br>
-    Address: <input type="text" name="site" placeholder="Address"><br><br>
-    Date: <input type="datetime" name="date" placeholder="Date"><br><br>
-    Type of Location: <input type="text" name="prayer" placeholder="Type of Location"><br><br>
-    <button type="submit">Submit</button><br><br>
-    </form> -->
+
+<form [formGroup]= "locationsForm" (ngSubmit)="onSubmit(locationsForm.value)">
+  <div>
+    <label for="name">
+      Name
+    </label>
+    <input id="name" type="text" formControlName="name">
+  </div>
+  <div>
+    <label for="site">
+      Location Name
+    </label>
+    <input id="site" type="text" formControlName="site">
+  </div>
+  <div>
+  <label for="address">
+    Address
+  </label>
+  <input id="address" type="text" formControlName="address">
+</div>
+<div>
+  <label for="type">
+    Type of Location
+  </label>
+  <input id="type" type="text" formControlName="type">
+</div>
+  <div>
+    <label for="date">
+      Date
+    </label>
+    <input id="date" type="datetime" formControlName="date">
+  </div>
+
+<button class="button" type="submit">Submit</button>
+
+    </form>
 
     <locations-request></locations-request>
