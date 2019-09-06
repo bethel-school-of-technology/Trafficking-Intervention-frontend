@@ -19,6 +19,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { GetRequestComponent } from './components/prayer/fetchPrayer/fetch.component';
 import { FetchTestimoniesComponent } from './components/testimonies/fetch-testimonies/fetch-testimonies.component';
 import { FetchLocationsComponent } from './components/locations/fetch-locations/fetch-locations.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { FetchLocationsComponent } from './components/locations/fetch-locations/
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule
   ],

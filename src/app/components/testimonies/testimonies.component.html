@@ -3,12 +3,42 @@
   Please tell us about what God is doing!
 </p>
 
-<form style="text-align: center">
+<form [formGroup]="testimonyForm" (ngSubmit)="onSubmit(testimonyForm.value)">
+  <div>
+    <label for="name">
+      Name
+    </label>
+    <input id="name" type="text" formControlName="name">
+  </div>
+  <div>
+    <label for="site">
+      Site Location
+    </label>
+    <input id="site" type="text" formControlName="site">
+  </div>
+  <div>
+    <label for="date">
+      Date
+    </label>
+    <input id="date" type="datetime" formControlName="date">
+  </div>
+  <div>
+    <label for="testimony">
+      Testimony
+    </label>
+    <input id="testimony" type="text" formControlName="testimony">
+  </div>
+
+<button class="button" type="submit">Submit</button>
+
+    </form>
+
+<!-- <form style="text-align: center">
   Name: <input type="text" name="name" placeholder="Name"><br><br>
   Intervention Site: <input type="text" name="site" placeholder="Intervention Site"><br><br>
   Date: <input type="datetime" name="date" placeholder="Date"><br><br>
   Testimony: <input type="text" name="testimony" placeholder="Testimony"><br><br>
   <button type="submit">Submit</button><br><br>
   </form>
-
-  <testimonies-request></testimonies-request>
+ -->
+<testimonies-request></testimonies-request> 
