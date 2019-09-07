@@ -39,27 +39,28 @@ export class PrayerComponent {
   
       this.items = this.prayerService.clearItems();
       this.prayerForm.reset();
-    }Z
+    }
     getPrayer() {
 
+      function postData(postURL, Data = {}) {
+  fetch(this.postURL,{
+    method: 'POST',
+    body: JSON.stringify(this.items),
+    mode: 'cors', // no-cors, cors, *same-origin
+    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: 'omit',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
 
-//   fetch(this.postURL,{
-//     method: 'POST',
-//     body: JSON.stringify(this.items),
-//     mode: 'cors', // no-cors, cors, *same-origin
-//     cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-//     credentials: 'omit',
-//     headers: {
-//       'Content-Type': 'application/json'
-//     }
-//   })
+  .then(res => res.json())
 
-//   .then(res => res.json())
-
-// .then(response => console.log('Success:', JSON.stringify(response)))
-// .catch(error => console.error('Error:', error));
+.then(response => this.http.post(postURL, JSON.stringify(response)))
+.catch(error => console.error('Error:', error));
 
     }
+  }
   
   ngOnInit()    {  }
 
