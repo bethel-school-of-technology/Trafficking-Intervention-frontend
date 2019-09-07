@@ -23,7 +23,10 @@ export class LocationsComponent {
       this.locationsForm = this.formBuilder.group({
         name: '',
         site: '',
-        address:'',
+        street:'',
+        city: '',
+        state: '',
+        zip: '',
         type: '',
         date: ''
       });
@@ -39,7 +42,7 @@ export class LocationsComponent {
     }
     getPrayer() {
 
-
+  function postData(postURL, data = {}) {
   fetch(this.postURL,{
     method: 'POST',
     body: JSON.stringify(this.items),
@@ -50,12 +53,14 @@ export class LocationsComponent {
       'Content-Type': 'application/json'
     }
   })
+
     
   .then(res => res.json())
 
 .then(response => console.log('Success:', JSON.stringify(response)))
 .catch(error => console.error('Error:', error));
     }
+  }
   ngOnInit() {
   }
 

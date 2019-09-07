@@ -24,7 +24,7 @@ export class TestimoniesComponent implements OnInit {
         name: '',
         site: '',
         date:'',
-        prayer: ''
+        testimony: ''
       });
     }
 
