@@ -10,12 +10,12 @@ import { HttpClient } from '@angular/common/http';
 
 export class PrayerService {
   items = [];
-  
+  postURL: 'http://localhost:5000/api/PrayerRequest';
   
   constructor(private http: HttpClient){}
 
   addToPrayer(items) {
-    this.items.push(this.items);
+    this.items.push(this.postURL, this.items);
   }
 
   getItems() {
