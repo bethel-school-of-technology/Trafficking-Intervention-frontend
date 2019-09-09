@@ -1,22 +1,43 @@
-.nav {
+#nav {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     align-items: stretch;
-    /* background-color: #e0c722; */
+    width: 100%;
+    float: left;
+    font-size: 24px;
+    color: black;
+    background-color:  black;
+    color: white
+
     /* float: left; */
     /* display: block; */
 }
 
-/* .nav a:hover {
-    background-color: #e0c722;
-    color: black;
-  }
-
-  .nav a.active {
-    background-color: #4CAF50;
+#nav a:hover {
+    background-color: rgb(250, 228, 35);
     color: white;
   }
-   */
-   /* comment back in when bootstrap is gone */
+
+  #nav a.active {
+    background-color: white;
+    color: black;
+  }
+  
+  @media screen and (max-width: 1024px) {
+   #nav a {
+      float: none;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      align-content: left;
+    /* If you want the text to be left-aligned on small screens */
+   } 
+  }
+
+.btn {
+  color: white
+}
+  /* comment back in when bootstrap is gone */

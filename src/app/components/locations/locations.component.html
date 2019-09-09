@@ -1,63 +1,74 @@
-<br><h1 style="text-align: center">Locations</h1>
-  <div>
-<br><p style="text-align: center">
-  In an effort to have an updated map of trafficking locations in Houston, you can report a suspected location below:
-</p> 
+<br>
+<h1 style="text-align: center">Locations</h1>
+<div>
+  <br>
+  <p style="text-align: center">
+    In an effort to have an updated map of trafficking locations in Houston, you can report a suspected location below:
+  </p>
 </div>
 
 
-<form [formGroup]= "locationsForm" (ngSubmit)="onSubmit(locationsForm.value)">
+<form class="form" [formGroup]="locationsForm" (ngSubmit)="onSubmit(locationsForm.value)">
   <div>
     <label for="name">
       Name
-    </label>
-    <input id="name" type="text" formControlName="name">
+    </label><br>
+    <input id="name" type="text" formControlName="name" placeholder="Name">
   </div>
+  <br>
   <div>
     <label for="site">
       Location Name
-    </label>
+    </label><br>
     <input id="site" type="text" formControlName="site">
   </div>
+  <br>
   <div>
     <label for="street">
       Street Address
-    </label>
+    </label><br>
     <input id="street" type="text" formControlName="street">
   </div>
+  <br>
   <div>
     <label for="city">
       City
-    </label>
+    </label><br>
     <input id="city" type="text" formControlName="city">
   </div>
+  <br>
   <div>
     <label for="state">
       State
-    </label>
+    </label><br>
     <input id="state" type="text" formControlName="state">
   </div>
+  <br>
   <div>
     <label for="zip">
       Zip
-    </label>
+    </label><br>
     <input id="zip" type="text" formControlName="zip">
   </div>
-<div>
-  <label for="type">
-    Type of Location
-  </label>
-  <input id="type" type="text" formControlName="type">
-</div>
+  <br>
+  <div>
+    <label for="type">
+      Type of Location
+    </label><br>
+    <input id="type" type="text" formControlName="type">
+  </div>
+  <br>
   <div>
     <label for="date">
-      Date
-    </label>
+      Date  
+    </label><br>
     <input id="date" type="datetime" formControlName="date">
   </div>
+  <br>
 
-<button class="button" type="submit">Submit</button>
+  <button class="button" type="submit">Submit</button>
+  <br>
 
-    </form>
+  <locations-request></locations-request>
 
-    <locations-request></locations-request>
+</form>

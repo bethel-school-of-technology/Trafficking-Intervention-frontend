@@ -17,6 +17,7 @@ export class PrayerComponent {
   items;
   prayerForm: FormGroup;
   postURL: 'http://localhost:5000/api/PrayerRequest';
+  http: any;
 
 
   constructor(
@@ -31,38 +32,23 @@ export class PrayerComponent {
         prayer: ''
       });
      }
+     create(items: PrayerService) {
+      return this.http.put(this.postURL, items);
+  }
 
      onSubmit(prayerData) {
 
-    
-      console.warn('Your prayer request has been submitted', prayerData);
   
+      console.log('Your prayer request has been submitted', prayerData);
       this.items = this.prayerService.clearItems();
       this.prayerForm.reset();
     }
-    getPrayer() {
 
-      function postData(postURL, Data = {}) {
-  fetch(this.postURL,{
-    method: 'POST',
-    body: JSON.stringify(this.items),
-    mode: 'cors', // no-cors, cors, *same-origin
-    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-    credentials: 'omit',
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  })
-
-  .then(res => res.json())
-
-.then(response => this.http.post(postURL, JSON.stringify(response)))
-.catch(error => console.error('Error:', error));
-
-    }
-  }
   
-  ngOnInit()    {  }
+  ngOnInit()    {  
+        
+
+  }
 
 }
 

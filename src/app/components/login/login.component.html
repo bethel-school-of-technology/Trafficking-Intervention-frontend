@@ -1,9 +1,11 @@
-<br><h1 style="text-align: center">Trafficking Interventions</h1>
-<br><p style="text-align: center">
+<br>
+<h1 style="text-align: center">Trafficking Interventions</h1>
+<br>
+<p style="text-align: center">
   Please Login or Register!
 </p>
 
-<form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+<form class = "form" [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
   <div>
     <label for="username">
       Username
@@ -17,6 +19,6 @@
     <input id="password" type="text" formControlName="password">
   </div>
 
-<button class="button" type="submit">Submit</button>
+  <button class="button" type="submit">Submit</button>
 
-    </form>
+</form>

@@ -8,6 +8,7 @@ import { PrayerComponent } from './components/prayer/prayer.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { TestimoniesComponent } from './components/testimonies/testimonies.component';
 import { LogoutComponent } from './components/logout/logout.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   {path: '', redirectTo: '/login', pathMatch: 'full'},
