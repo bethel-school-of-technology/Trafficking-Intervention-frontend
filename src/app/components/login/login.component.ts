@@ -52,6 +52,7 @@ export class LoginComponent {
       username: ['', Validators.required],
       password: ['', Validators.required]
     });
+    
   }
 
   //   onSubmit() {
@@ -67,7 +68,7 @@ export class LoginComponent {
   //         .pipe(first())
   //         .subscribe(
   //             data => {
-  //                 this.router.navigate([this.returnUrl]);
+  //                 this.router.navigate([this.postURL]);
   //             },
   //             error => {
   //                 this.alertService.error(error);

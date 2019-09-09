@@ -5,3 +5,13 @@
     justify-content: space-evenly;
     flex-wrap: wrap
 }
+.loginButton {
+    background-color: black;
+    color: white
+}
+.registerButton {
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center
+}
