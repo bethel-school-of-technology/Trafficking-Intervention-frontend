@@ -1,0 +1,19 @@
+.links {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around
+}
+.locationsButton {
+    background-color: black;
+    color: white
+}
+.testimoniesButton {
+    background-color: black;
+    color: white;
+}
+.prayerButton {
+    background-color: black;
+    color: white
+}
