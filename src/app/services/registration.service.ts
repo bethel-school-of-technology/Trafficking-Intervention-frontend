@@ -11,7 +11,7 @@ export class RegistrationService {
   
   constructor(private http: HttpClient){}
 
-  addToLocations(items) {
+  addToUsers(items) {
     this.items.push(this.items);
   }
 

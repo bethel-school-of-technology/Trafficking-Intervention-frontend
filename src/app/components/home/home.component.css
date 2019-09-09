@@ -1,5 +1,8 @@
+.header{
+    padding: 50px
+}
 .links {
-    padding: 20px;
+    padding: 10px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -18,13 +21,11 @@
     color: white
 }
 .info{
-    padding: 50px
+    padding: 50px;
 }
 @media all and (max-width: 700px) {
     .home {
       /* On small screens, we are no longer using row direction but column */
       flex-direction: column;
-      float: left;
-      align-items: left
     }
   }

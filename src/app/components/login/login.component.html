@@ -5,7 +5,7 @@
   Please Login or Register!
 </p>
 
-<form class = "form" [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+<form class="form" [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
   <div>
     <label for="username">
       Username
@@ -18,7 +18,8 @@
     </label><br>
     <input id="password" type="text" formControlName="password">
   </div>
-<br>
-  <button class="button" type="submit">Submit</button>
+  <br>
+  <button class="loginButton" type="submit"><a routerLink='../home'>Submit</a></button><br>
 
+  <button class="registerButton" type="submit"><a routerLink='../registration'>Register</a></button>
 </form>
