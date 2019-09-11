@@ -1,0 +1,21 @@
+<form (ngSubmit)="onSubmit()">
+    <div>
+        <label for="name">Name: </label>
+        <input type="text" placeholder="name" name="name" required [(ngModel)]="model.name">
+    </div>
+    <div>
+        <label for="site">Site Location: </label>
+        <input type="text" placeholder="site" name="site" required [(ngModel)]="model.site">
+    </div>
+    <div>
+        <label for="date">Date: </label>
+        <input type="datetime" placeholder="date" name="date" required [(ngModel)]="model.date">
+    </div>
+    <div>
+        <label for="testimony">Testimony: </label>
+        <input type="text" placeholder="testimony" name="testimony" required [(ngModel)]="model.testimony">
+    </div>
+
+    <button class="button" type="submit">Submit</button>
+
+</form>

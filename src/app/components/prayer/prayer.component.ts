@@ -20,6 +20,7 @@ export class PrayerComponent {
   http: any;
 
 
+
   constructor(
     private prayerService: PrayerService,
     private formBuilder: FormBuilder,
@@ -38,15 +39,15 @@ export class PrayerComponent {
 
      onSubmit(prayerData) {
 
-  
+
       console.log('Your prayer request has been submitted', prayerData);
-      this.items = this.prayerService.clearItems();
+      this.items = this.prayerService.deleteItems();
       this.prayerForm.reset();
     }
 
-  
-  ngOnInit()    {  
-        
+
+  ngOnInit()    {
+
 
   }
 

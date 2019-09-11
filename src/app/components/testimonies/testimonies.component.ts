@@ -33,7 +33,7 @@ export class TestimoniesComponent implements OnInit {
     // this.items.post(this.postURL);
     console.warn('Your testimony has been submitted', testimonyData);
 
-    this.items = this.testimonyService.clearItems();
+    this.items = this.testimonyService.deleteItems();
     this.testimonyForm.reset();
   }
   //   getPrayer() {
