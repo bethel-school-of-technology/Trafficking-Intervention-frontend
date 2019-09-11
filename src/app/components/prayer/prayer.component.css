@@ -5,3 +5,7 @@
     justify-content: space-evenly;
     flex-wrap: wrap
 }
+.display {
+    display: flex;
+    flex-direction: row-wrap;
+}

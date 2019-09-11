@@ -1,11 +1,11 @@
 <h1 style="text-align: center">Prayer Requests</h1>
 <div>
-<p style="text-align: center">
-  Please let us know how we can pray!
-</p>
+  <p style="text-align: center">
+    Please let us know how we can pray!
+  </p>
 </div>
 
-<form class = "form" [formGroup]="prayerForm" (ngSubmit)="onSubmit(prayerForm.value)">
+<form class="form" [formGroup]="prayerForm" (ngSubmit)="onSubmit(prayerForm.value)">
   <div>
     <label for="name">
       Name
@@ -33,11 +33,10 @@
     </label><br>
     <input id="prayer" type="text" formControlName="prayer">
   </div>
-<br>
-<button class="button" type="submit">Submit</button><br>
+  <br>
+  <button class="button" type="submit">Submit</button><br>
 
-
-<prayer-request></prayer-request>
-
+  <div class='display'>
+    <prayer-request class></prayer-request>
+  </div>
 </form>
-   
