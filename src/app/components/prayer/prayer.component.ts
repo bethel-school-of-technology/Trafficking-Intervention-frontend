@@ -23,6 +23,7 @@ export class PrayerComponent {
 
 
 
+
   constructor(
     private httpClient: HttpClient,
     private prayerService: PrayerService,
@@ -36,6 +37,7 @@ export class PrayerComponent {
       prayer: ''
     });
   }
+<<<<<<< HEAD
   getPrayer(): Observable<Prayer[]> {
     return (this.items);
   }
@@ -81,6 +83,19 @@ export class PrayerComponent {
   
 
   ngOnInit() {
+=======
+
+     onSubmit(prayerData) {
+
+
+      console.log('Your prayer request has been submitted', prayerData);
+      this.items = this.prayerService.deleteItems();
+      this.prayerForm.reset();
+    }
+
+
+  ngOnInit()    {
+>>>>>>> c43922db31d281752c6581fbecdc6cd3c23f813e
 
 
   }
