@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 
 @Component({
    selector: 'prayer-request',
-   template: `<h1> </h1>
+   template: `<div class = 'display'>
    <button type="button" (click)="this.getApi()">See All Prayer Requests!</button>
    <ul *ngFor = "let data of apiData">
    <li>{{data.firstName}} {{data.lastName}}</li>
@@ -11,6 +11,7 @@ import { Component } from '@angular/core';
    <li>{{data.date}}</li>
    <li>{{data.sites}}</li>
    </ul>
+   </div>
    `
 })
 export class GetRequestComponent {

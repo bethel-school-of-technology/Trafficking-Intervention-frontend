@@ -1,22 +1,25 @@
-<br><h1 style="text-align: center">Trafficking Interventions</h1>
-<br><p style="text-align: center">
+<br>
+<h1 style="text-align: center">Trafficking Interventions</h1>
+<br>
+<p style="text-align: center">
   Please Login or Register!
 </p>
 
-<form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+<form class="form" [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
   <div>
     <label for="username">
       Username
-    </label>
+    </label><br>
     <input id="username" type="text" formControlName="username">
   </div>
   <div>
     <label for="password">
       Password
-    </label>
+    </label><br>
     <input id="password" type="text" formControlName="password">
   </div>
+  <br>
+  <button class="loginButton" type="submit"><a routerLink='../home'>Submit</a></button><br>
 
-<button class="button" type="submit">Submit</button>
-
-    </form>
+  <button class="registerButton" type="submit"><a routerLink='../registration'>Register</a></button>
+</form>

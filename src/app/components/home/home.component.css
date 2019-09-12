@@ -1,0 +1,31 @@
+.header{
+    padding: 50px
+}
+.links {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around
+}
+.locationsButton {
+    background-color: black;
+    color: white
+}
+.testimoniesButton {
+    background-color: black;
+    color: white;
+}
+.prayerButton {
+    background-color: black;
+    color: white
+}
+.info{
+    padding: 50px;
+}
+@media all and (max-width: 700px) {
+    .home {
+      /* On small screens, we are no longer using row direction but column */
+      flex-direction: column;
+    }
+  }

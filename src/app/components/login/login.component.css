@@ -1,0 +1,17 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap
+}
+.loginButton {
+    background-color: black;
+    color: white
+}
+.registerButton {
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center
+}
