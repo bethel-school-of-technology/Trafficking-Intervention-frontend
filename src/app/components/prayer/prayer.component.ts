@@ -1,6 +1,5 @@
 import { Component, OnInit, ɵConsole } from '@angular/core';
 import { PrayerService } from '../../services/prayer.service';
-
 import { HttpClientModule, HttpClient, HttpRequest, HttpHeaders, } from '@angular/common/http';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { post} from 'selenium-webdriver/http';
@@ -33,7 +32,6 @@ export class PrayerComponent {
     private prayerService: PrayerService,
     private formBuilder: FormBuilder,
 
-    private httpClient: HttpClient
     ) {
       this.items = this.prayerService.getItems();
       this.prayerForm = this.formBuilder.group({
@@ -74,8 +72,6 @@ export class PrayerComponent {
  
   
  ngOnInit(){}
-
-
 
 }
 
