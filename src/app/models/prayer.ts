@@ -3,6 +3,6 @@ export class Prayer{
     firstName: string;
     lastName: string;
     prayer: string;
-    date: Date;
+    date: string;
     site: string;
 }
