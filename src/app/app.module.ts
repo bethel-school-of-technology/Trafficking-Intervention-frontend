@@ -20,6 +20,7 @@ import { GetRequestComponent } from './components/prayer/fetchPrayer/fetch.compo
 import { FetchTestimoniesComponent } from './components/testimonies/fetch-testimonies/fetch-testimonies.component';
 import { FetchLocationsComponent } from './components/locations/fetch-locations/fetch-locations.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -35,13 +36,13 @@ import { ReactiveFormsModule } from '@angular/forms';
     GetRequestComponent,
     FetchTestimoniesComponent,
     FetchLocationsComponent 
-    // added GetRequestComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    CommonModule
   ],
   providers: [PrayerService, LocationsService, TestimoniesService],
   bootstrap: [AppComponent]

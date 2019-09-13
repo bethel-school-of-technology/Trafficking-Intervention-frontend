@@ -8,12 +8,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   styleUrls: ['./prayer-form.component.css']
 })
 export class PrayerFormComponent implements OnInit {
-model: Prayer = new Prayer();
+// model: Prayer = newPrayer();
   constructor() { }
 
   ngOnInit() {
   }
 onSubmit() {
-  console.log('Submit Successful: ', this.model);
+  // console.log('Submit Successful: ', this.model);
  }
 }
