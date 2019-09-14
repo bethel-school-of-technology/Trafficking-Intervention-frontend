@@ -13,7 +13,7 @@ export class PrayerService {
 
   prayer: Prayer;
 
-  url: 'http://localhost:5000/api/PrayerRequest/';
+  URL: 'http://localhost:5000/api/PrayerRequest/';
   headers = new HttpHeaders().set('Content-Type', 'application/json').set('Accept', 'application/json');
   httpOptions = {
     headers: this.headers,
@@ -26,31 +26,31 @@ export class PrayerService {
     return throwError(error);
   }
 
-  getPrayer(): Observable<Prayer> {
-    return this.http.get<Prayer>(this.url).pipe(
+  getPrayer(firstName: string): Observable<Prayer> {
+    return this.http.get<Prayer>(this.URL).pipe(
       tap(data => console.log(data)),
       catchError(this.handleError)
     );
   }
 
   addPrayer(prayer: Prayer): Observable<Prayer> {
-    prayer.id = null;
-    return this.http.post<Prayer>(this.url, prayer, this.httpOptions).pipe(
+    prayer.firstName = null;
+    return this.http.post<Prayer>(this.URL, prayer, this.httpOptions).pipe(
       tap(data => console.log(data)),
       catchError(this.handleError)
     );
   }
   updatePrayer(prayer: Prayer): Observable<Prayer> {
-    // const updateurl = this.postURL/'${user.id}`;
-    return this.http.put<Prayer>(this.url, prayer, this.httpOptions).pipe(
+    const updateurl = `${this.URL}/${prayer.firstName}`;
+    return this.http.put<Prayer>(updateurl, prayer, this.httpOptions).pipe(
       tap(() => this.prayer),
       catchError(this.handleError)
     );
   }
 
-  deletePrayer(id: number): Observable<Prayer> {
+  deletePrayer(_firstName: string): Observable<Prayer> {
     // const url = `${this.apiurl}/${id}`;
-    return this.http.delete<Prayer>(this.url, this.httpOptions).pipe(
+    return this.http.delete<Prayer>(this.URL, this.httpOptions).pipe(
       catchError(this.handleError)
     );
   }

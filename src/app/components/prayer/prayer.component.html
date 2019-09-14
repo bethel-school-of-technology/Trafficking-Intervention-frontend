@@ -7,10 +7,17 @@
 
 <form class="form" [formGroup]="prayerForm" (ngSubmit)="onSubmit(prayerForm.value)">
   <div>
-    <label for="name">
-      Name
+    <label for="firstName">
+      First Name
     </label><br>
-    <input id="name" type="text" formControlName="name">
+    <input id="firstName" type="text" formControlName="firstName">
+  </div>
+  <br>
+  <div>
+    <label for="lastName">
+      Last Name
+    </label><br>
+    <input id="lastName" type="text" formControlName="lastName">
   </div>
   <br>
   <div>
@@ -35,13 +42,15 @@
   </div>
   <br>
   <button class="button" type="submit">Submit</button><br>
+  <button class= "button" (click)="updatePrayer()"> UPDATE</button><br>
+  <button class= 'button' (click)="deletePrayer()"> DELETE</button><br>
 
   <div class='display'>
     <prayer-request class></prayer-request>
   </div>
 </form>
 
-<div align-content='center'><h1>Update Prayer Request</h1></div>
+<!-- <div align-content='center'><h1>Update Prayer Request</h1></div>
 
 
 <table class ="table">
@@ -50,7 +59,7 @@
       {{u.id}}
     </td>
     <td>
-      {{u.name}}
+      {{u.firstName}}
     </td>
     <td>
       {{u.prayer}}
@@ -65,4 +74,4 @@
       <button class= 'btn btn-info' (click)="updatePrayer()"> UPDATE</button>
     </td>
   </tr>
-</table>
+</table> -->
