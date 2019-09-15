@@ -17,7 +17,7 @@ import { Locations } from '../../models/locations';
 export class LocationsComponent implements OnInit{
   locations: Locations;
   locationsForm: FormGroup;
-  URL = 'http://localhost:5000/api/Locations/';
+  URL = 'http://localhost:5000/api/Location';
   displayData: boolean;
   headers = new HttpHeaders().set('Content-Type', 'application/json').set('Accept', 'application/json');
   httpOptions = {
