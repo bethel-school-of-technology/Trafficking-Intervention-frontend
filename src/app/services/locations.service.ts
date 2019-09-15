@@ -8,9 +8,12 @@ import { tap, catchError } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
+
 export class LocationsService {
-  location: Locations;
-  URL: 'http://localhost:5000/api/Location/';
+
+  locations: Locations;
+
+  URL: 'http://localhost:5000/api/Locations/';
   headers = new HttpHeaders().set('Content-Type', 'application/json').set('Accept', 'application/json');
   httpOptions = {
     headers: this.headers,
@@ -23,31 +26,36 @@ export class LocationsService {
     return throwError(error);
   }
 
-  getLocation(name: string): Observable<Locations> {
+  getLocations(name: string): Observable<Locations> {
     return this.http.get<Locations>(this.URL).pipe(
       tap(data => console.log(data)),
       catchError(this.handleError)
     );
   }
 
-  addLocation(location: Locations): Observable<Locations> {
-    return this.http.post<Locations>(this.URL, location, this.httpOptions).pipe(
+  addLocations(locations: Locations): Observable<Locations> {
+    // prayer.firstName = null;
+    return this.http.post<Locations>(this.URL, locations, this.httpOptions).pipe(
       tap(data => console.log(data)),
       catchError(this.handleError)
     );
   }
-  updateLocation(location: Locations): Observable<Locations> {
+  updateLocations(locations: Locations): Observable<Locations> {
     // const updateurl = `${this.URL}/${prayer.lastName}`;
-    return this.http.put<Locations>(this.URL, location, this.httpOptions).pipe(
-      tap(() => this.location),
+    return this.http.put<Locations>(this.URL, locations, this.httpOptions).pipe(
+      tap(() => this.locations),
       catchError(this.handleError)
     );
   }
 
-  deleteLocation(location: Locations): Observable<Locations> {
+  deleteLocations(locations: Locations): Observable<Locations> {
     // const deleteurl = `${this.URL}/${prayer.firstName, prayer.lastName}`;
     return this.http.delete<Locations>(this.URL, this.httpOptions).pipe(
       catchError(this.handleError)
     );
   }
+
 }
+
+
+

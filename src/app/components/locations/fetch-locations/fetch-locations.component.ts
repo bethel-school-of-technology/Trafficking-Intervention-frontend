@@ -19,7 +19,7 @@ import { Component } from '@angular/core';
 export class FetchLocationsComponent {
    apiData;
    getApi() {
-       const url = 'http://localhost:5000/api/Location';
+       const url = 'http://localhost:5000/api/Locations/';
        fetch(url)
            .then(resp => resp.json())
            .then(resp => (this.apiData = resp));
