@@ -8,12 +8,3 @@ export class Prayer{
     ){}
 }
 
-// export class Prayer{
-//     constructor(
-//     public id = 0,
-//     public name: '',
-//     public prayer = '',
-//     public date = '',
-//     public site: ''
-//     ){}
-// }

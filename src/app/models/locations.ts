@@ -1,8 +1,10 @@
 export class Locations{
-    name: string;
-    address: string;
-    city: string;
-    state: string;
-    zipCode: string;
-    locationType: string;
+    constructor(
+        public name: string = '',
+        public address: string = '',
+        public city: string  = '',
+        public state: string = '',
+        public zipCode: string = '',
+        public locationType: string = ''
+        ){}
 }

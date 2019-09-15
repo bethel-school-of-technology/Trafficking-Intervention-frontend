@@ -1,11 +1,11 @@
-<br>
 <h1 style="text-align: center">Testimonies</h1>
-<br>
-<p style="text-align: center">
-  Please tell us about what God is doing!
-</p>
+<div>
+  <p style="text-align: center">
+    Please tell us about what God is doing!
+  </p>
+</div>
 <div id="form">
-  <form class="form" [formGroup]="testimonyForm" (ngSubmit)="onSubmit(testimonyForm.value)">
+  <form class="form" [formGroup]="testimoniesForm" (ngSubmit)="onSubmit(testimoniesForm.value)">
     <div>
       <label for="firstName">
         First Name
@@ -21,19 +21,19 @@
     </div>
     <br>
     <div>
-      <label for="testimony">
+      <label for="testimonies">
         Testimony
       </label><br>
-      <input id="testimony" type="text" formControlName="testimony">
+      <input id="testimonies" type="text" formControlName="testimonies">
     </div>
     <br>
     <div>
-    <label for="date">
-      Date
-    </label><br>
-    <input id="date" type="text" formControlName="date">
-  </div>
-  <br>
+      <label for="date">
+        Date
+      </label><br>
+      <input id="date" type="text" formControlName="date">
+    </div>
+    <br>
     <div>
       <label for="site">
         Site Location
@@ -41,9 +41,9 @@
       <input id="site" type="text" formControlName="site">
     </div>
     <br>
-    <button type = "submit" ng-click = "submit()">Submit</button><br>
-    <button type="button" ng-click ="update()"> Update</button><br>
-    <button type="button" ng-click = "delete()"> Delete</button><br>
+    <button type="submit" ng-click="submit()">Submit</button><br>
+    <button type="button" ng-click="update()"> Update</button><br>
+    <button type="button" ng-click="delete()"> Delete</button><br>
 
     <br>
     <testimonies-request></testimonies-request>
