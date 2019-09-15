@@ -41,37 +41,13 @@
     <input id="site" type="text" formControlName="site">
   </div>
   <br>
-  <button class="button" type="submit">Submit</button><br>
-  <button class= "button" (click)="updatePrayer()"> UPDATE</button><br>
-  <button class= 'button' (click)="deletePrayer()"> DELETE</button><br>
+  <button type = "submit" ng-click = "submit()">Submit</button><br>
+  <button type="button" ng-click ="update()"> Update</button><br>
+  <button type="button" ng-click = "delete()"> Delete</button><br>
 
   <div class='display'>
     <prayer-request class></prayer-request>
   </div>
+
 </form>
 
-<!-- <div align-content='center'><h1>Update Prayer Request</h1></div>
-
-
-<table class ="table">
-  <tr *ngFor="let u of prayer">
-    <td>
-      {{u.id}}
-    </td>
-    <td>
-      {{u.firstName}}
-    </td>
-    <td>
-      {{u.prayer}}
-    </td>
-    <td>
-      {{u.date}}
-    </td>
-    <td>
-      {{u.site}}
-    </td>
-    <td>  
-      <button class= 'btn btn-info' (click)="updatePrayer()"> UPDATE</button>
-    </td>
-  </tr>
-</table> -->

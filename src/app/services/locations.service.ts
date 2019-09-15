@@ -1,43 +1,53 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpRequest } from '@angular/common/http';
+import { getElementDepthCount } from '@angular/core/src/render3/state';
+import { Locations } from '../models/locations';
+import { Observable, throwError } from 'rxjs';
+import { tap, catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LocationsService {
+  location: Locations;
+  URL: 'http://localhost:5000/api/Location';
+  headers = new HttpHeaders().set('Content-Type', 'application/json').set('Accept', 'application/json');
+  httpOptions = {
+    headers: this.headers,
+  };
 
-  apiURL: string ='http://localhost:5000/api/values';
-  postUrl: string ='http://localhost:4200/locations';
+  constructor(private http: HttpClient) { }
 
-  items = [];
-  
-  
-  constructor(private http: HttpClient){}
-
-  addToLocations(items) {
-    this.items.push(this.items);
+  private handleError(error: any) {
+    console.error(error);
+    return throwError(error);
   }
 
-  getItems() {
-    return this.items;
+  getLocation(name: string): Observable<Locations> {
+    return this.http.get<Locations>(this.URL).pipe(
+      tap(data => console.log(data)),
+      catchError(this.handleError)
+    );
   }
 
-  clearItems() {
-    this.items = [];
-    return this.items;
+  addLocation(location: Locations): Observable<Locations> {
+    return this.http.post<Locations>(this.URL, location, this.httpOptions).pipe(
+      tap(data => console.log(data)),
+      catchError(this.handleError)
+    );
+  }
+  updateLocation(location: Locations): Observable<Locations> {
+    // const updateurl = `${this.URL}/${prayer.lastName}`;
+    return this.http.put<Locations>(this.URL, location, this.httpOptions).pipe(
+      tap(() => this.location),
+      catchError(this.handleError)
+    );
   }
 
-//   public getLocations(){
-//     return this.http.get<Locations[]>(`${this.apiURL}`);
-// }
-//   public createLocations(locations): Locations){
-//     return this.http.post(`${this.postUrl}`, locations);
-// }
-// public updateLocationstestimonies: Locations){
-//   return this.http.put(`${this.apiURL}`, locations);
-// }
-
-// public deleteLocations(locations: Locations){
-//   return this.http.put(`${this.apiURL}`, locations);
-// }
+  deleteLocation(location: Locations): Observable<Locations> {
+    // const deleteurl = `${this.URL}/${prayer.firstName, prayer.lastName}`;
+    return this.http.delete<Locations>(this.URL, this.httpOptions).pipe(
+      catchError(this.handleError)
+    );
+  }
 }

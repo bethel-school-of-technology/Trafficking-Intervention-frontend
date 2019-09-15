@@ -3,11 +3,17 @@ import { Component } from '@angular/core';
 
 @Component({
    selector: 'locations-request',
-   template: `<h1>  </h1>
+   template: `<div class = 'display'>
    <button type="button" (click)="this.getApi()">See All Locations!</button>
    <ul *ngFor = "let data of apiData">
-   <li>{{data.prayerRequests}} {{data.firstName}} {{data.lastName}}</li>
+   <li>{{data.name}}</li>
+   <li>{{data.address}}</li>
+   <li>{{data.city}}</li>
+   <li>{{data.state}}</li>
+   <li>{{data.zipCode}}</li>
+   <li>{{data.locationType}}</li>
    </ul>
+   </div>
    `
 })
 export class FetchLocationsComponent {
