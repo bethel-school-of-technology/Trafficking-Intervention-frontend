@@ -18,7 +18,7 @@ import { FetchLocationsComponent } from './fetch-locations/fetch-locations.compo
 export class LocationsComponent {
   location: Locations;
   locationsForm: FormGroup;
-  URL: 'http://localhost:5000/api/Location';
+  URL: 'http://localhost:5000/api/Location/';
   displayData: boolean;
   headers = new HttpHeaders().set('Content-Type', 'application/json').set('Accept', 'application/json');
   httpOptions = {

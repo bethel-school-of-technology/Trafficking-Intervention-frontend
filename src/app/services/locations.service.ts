@@ -10,7 +10,7 @@ import { tap, catchError } from 'rxjs/operators';
 })
 export class LocationsService {
   location: Locations;
-  URL: 'http://localhost:5000/api/Location';
+  URL: 'http://localhost:5000/api/Location/';
   headers = new HttpHeaders().set('Content-Type', 'application/json').set('Accept', 'application/json');
   httpOptions = {
     headers: this.headers,
