@@ -15,7 +15,7 @@ import { Component } from '@angular/core';
 export class FetchTestimoniesComponent {
    apiData;
    getApi() {
-       const url = 'http://localhost:5000/api/Testimony';
+       const url = 'http://localhost:5000/api/Testimony/';
        fetch(url)
            .then(resp => resp.json())
            .then(resp => (this.apiData = resp));

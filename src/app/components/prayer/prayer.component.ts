@@ -6,7 +6,7 @@ import { post } from 'selenium-webdriver/http';
 import { throwError, Observable } from 'rxjs';
 import { tap, catchError, map } from 'rxjs/operators';
 import { Prayer } from '../../models/prayer';
-import { PrayerFormComponent } from 'src/app/prayer-form/prayer-form.component';
+
 
 @Component({
   selector: 'app-prayer',
@@ -86,7 +86,7 @@ export class PrayerComponent implements OnInit{
     return this.httpClient.post<Prayer>(this.URL, prayer, this.httpOptions)
   }
 
-  updatePrayer(prayerForm: PrayerFormComponent){
+  updatePrayer(prayer: Prayer){
     return this.prayerService.updatePrayer(this.prayer).subscribe(data => {
       this.prayer = data;
       this.prayer.lastName = 'Updated Prayer';
@@ -95,16 +95,6 @@ export class PrayerComponent implements OnInit{
       });
     });
   }
-
-  // updatePrayer(prayer: Prayer) {
-  //  return this.prayerService.updatePrayer(this.prayer).subscribe(data => {
-  //     this.prayer = data;
-  //     this.prayer.lastName = 'Updated Prayer';
-  //     this.prayerService.updatePrayer(this.prayer).subscribe(data1 => {
-  //       this.getPrayer();
-  //     });
-  //   });
-  // }
 
   deletePrayer(prayer: Prayer) {
     this.prayerService.deletePrayer(prayer).subscribe(data => {
