@@ -1,7 +1,8 @@
 export class Locations{
-    id: number;
-    locationName: string;
+    name: string;
     address: string;
-    date: Date;
-    confirmed: boolean;
+    city: string;
+    state: string;
+    zipCode: string;
+    locationType: string;
 }

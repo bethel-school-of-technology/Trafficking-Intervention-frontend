@@ -13,21 +13,14 @@
     <label for="name">
       Name
     </label><br>
-    <input id="name" type="text" formControlName="name" placeholder="Name">
+    <input id="name" type="text" formControlName="name">
   </div>
   <br>
   <div>
-    <label for="site">
-      Location Name
+    <label for="address">
+      Address
     </label><br>
-    <input id="site" type="text" formControlName="site">
-  </div>
-  <br>
-  <div>
-    <label for="street">
-      Street Address
-    </label><br>
-    <input id="street" type="text" formControlName="street">
+    <input id="address" type="text" formControlName="address">
   </div>
   <br>
   <div>
@@ -45,28 +38,22 @@
   </div>
   <br>
   <div>
-    <label for="zip">
-      Zip
+    <label for="zipCode">
+      Zip Code
     </label><br>
-    <input id="zip" type="text" formControlName="zip">
+    <input id="zipCode" type="text" formControlName="zipCode">
   </div>
   <br>
   <div>
-    <label for="type">
+    <label for="locationType">
       Type of Location
     </label><br>
-    <input id="type" type="text" formControlName="type">
+    <input id="locationType" type="text" formControlName="locationType">
   </div>
-  <br>
-  <div>
-    <label for="date">
-      Date  
-    </label><br>
-    <input id="date" type="datetime" formControlName="date">
-  </div>
-  <br>
-
-  <button class="button" type="submit">Submit</button>
+<br>
+  <button type = "submit" ng-click = "submit()">Submit</button><br>
+  <button type="button" ng-click ="update()"> Update</button><br>
+  <button type="button" ng-click = "delete()"> Delete</button><br>
   <br>
 
   <locations-request></locations-request>

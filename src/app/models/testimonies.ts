@@ -3,6 +3,6 @@ export class Testimonies{
     firstName: string;
     lastName: string;
     testimony: string;
-    date: Date;
+    date: string;
     site: string;
 }
