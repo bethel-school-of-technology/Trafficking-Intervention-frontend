@@ -14,7 +14,7 @@ import { PrayerFormComponent } from 'src/app/prayer-form/prayer-form.component';
   styleUrls: ['./prayer.component.css']
 })
 
-export class PrayerComponent {
+export class PrayerComponent implements OnInit{
   prayer: Prayer;
   prayerForm: FormGroup;
   URL = 'http://localhost:5000/api/PrayerRequest';

@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
    <li>{{data.firstName}} {{data.lastName}}</li>
    <li>{{data.testimony}}</li>
    <li>{{data.date}}</li>
-   <li>{{data.sites}}</li>
+   <li>{{data.site}}</li>
    </ul>
    `
 })

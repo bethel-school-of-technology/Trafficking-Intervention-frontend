@@ -1,8 +1,10 @@
 export class Testimonies{
-    id: number;
-    firstName: string;
-    lastName: string;
-    testimony: string;
-    date: string;
-    site: string;
+    constructor(
+    public firstName: string = '',
+    public lastName: string = '',
+    public testimonies: string ='',
+    public date: string = '',
+    public site: string = ''
+    ){}
 }
+
