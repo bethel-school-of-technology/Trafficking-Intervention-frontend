@@ -13,7 +13,7 @@ export class LocationsService {
 
   locations: Locations;
 
-  URL: 'http://localhost:5000/api/Locations/';
+  URL: 'http://localhost:5000/api/Location';
   headers = new HttpHeaders().set('Content-Type', 'application/json').set('Accept', 'application/json');
   httpOptions = {
     headers: this.headers,
